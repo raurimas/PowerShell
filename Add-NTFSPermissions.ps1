@@ -5,7 +5,7 @@
 #NTFS permissions: AppendData, ChangePermissions, CreateDirectories, CreateFiles, Delete, DeleteSubdirectoriesAndFiles, ExecuteFile, FullControl, ListDirectory, Modify, Read, ReadAndExecute, ReadAttributes, ReadData, ReadExtendedAttributes, ReadPermissions, Synchronize, TakeOwnership, Traverse, Write, WriteAttributes, WriteData, WriteExtendedAttributes
 
 $Permissions = Import-Csv .\NTFSPermissions.csv -Delimiter '|'
-$Domain = "AD" #Active Directory domain name
+$Domain = "AD.domain.local" #Active Directory domain name
 
 function AddNTFSPermissions {
 	Param ($Path, $Domain, $Group, $Permissions, $Inheritance)
