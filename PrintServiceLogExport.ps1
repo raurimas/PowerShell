@@ -1,1 +1,0 @@
-Get-WinEvent -LogName Microsoft-Windows-PrintService/Operational | Select-Object Message,Id,Level,Task,Opcode,RecordId,UserId,TimeCreated | Export-Csv -Path "\\SMB_server\PrintService_logs_$(get-date -f yyyy-MM-dd).csv" -NoTypeInformation
